@@ -175,8 +175,9 @@
 
                     </div>
                     <div class="card-footer">
-                        <a  href="playerUpdate.html#${result.id}" class="btn btn-primary float-start">Edit</a>
-                        <a href="#" class="btn btn-primary float-end" onclick="deletePlayer(${result.id})">Delete</a>                    </div>
+                        <a href="playerUpdate.html#${result.id}" class="btn btn-outline-secondary float-start"><i class="fas fa-user-edit"></i></a>
+                        <button class="btn btn-outline-danger float-end" onclick="deletePlayer(${result.id})"><i class="far fa-trash-alt"></i></button>                    
+                    </div>
                 </div>
 
             </div>
