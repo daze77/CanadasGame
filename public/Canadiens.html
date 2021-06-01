@@ -29,66 +29,19 @@
 
     <div class="wrapper">
         <!-- Sidebar -->
-        <!-- <nav id="sidebar">
-            <div class="sidebar-header">
-              <h3>Canada's Game</h3>
-            </div>
-            <ul class="list-unstyled components">
-                <li >
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="registration.html">Registration</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Teams</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="Leafs.html">Leafs</a>
-                        </li>
-                        <li>
-                            <a class="active" href="Canadiens.html" >Canadiens</a>
-                        </li>
-                        <li>
-                            <a href="Senators.html">Senators</a>
-                        </li>
-                        <li>
-                            <a href="Canucks.html">Canucks</a>
-                        </li>
-                        <li>
-                            <a href="Flames.html">Flames</a>
-                        </li>
-                        <li>
-                            <a href="Jets.html">Jets</a>
-                        <li>
-                            <a href="Oliers.html">Oilers</a>
-                        </li>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="Available.html">Available Players</a>
-                </li>
-                <li>
-                    <a href="Resources.html">Resources</a>
-                </li>
-                <li>
-                    <a href="Contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav> -->
+
         <!-- Page Content -->
 
         
         <div id="content" id="canadiens">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <i class="fas fa-bars" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
+                    <i class="fas fa-bars" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar"></i>
                     <header>Canadiens</header>
                 </div>
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="sidebar" aria-labelledby="offcanvasWithBothOptionsLabel" >
                     <div class="offcanvas-header">
-                      <h3 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Canada's Game</h3>
+                      <h3 class="offcanvas-title " id="offcanvasWithBothOptionsLabel sidebar-header">Canada's Game</h3>
                       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -107,37 +60,38 @@
                                 <a href="registration.html">Registration</a>
                             </li>
                            
-                            <div class="accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-flush" id="teamsList">
                                 <div class="accordion-item">
-                                    <li class="" id="flush-headingOne">
-                                    <div class=" dropdown-toggle collapsed"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        Teams
+                                    <div class="" id="flush-headingOne">
+                                        <li class=" dropdown-toggle collapsed"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Teams
+                                        </li>
                                     </div>
-                                </li>
-                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <ul class="accordion-body list-unstyled" id="pageSubmenu">
-                                        <li>
-                                            <a href="Leafs.html">Leafs</a>
-                                        </li><li>
-                                            <a href="Canadiens.html" >Canadiens</a>
-                                        </li>
-                                        <li>
-                                            <a href="Senators.html">Senators</a>
-                                        </li>
-                                        <li>
-                                            <a href="Canucks.html">Canucks</a>
-                                        </li>
-                                        <li>
-                                            <a href="Flames.html">Flames</a>
-                                        </li>
-                                        <li>
-                                            <a href="Jets.html">Jets</a>
-                                        </li>
-                                        <li>
-                                            <a href="Oilers.html">Oilers</a>
-                                        </li>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#teamsList">
+                                        <ul class="accordion-body list-unstyled" id="pageSubmenu">
+                                            <li>
+                                                <a href="Leafs.html">Leafs</a>
+                                            </li>
+                                            <li >
+                                                <a  href="Canadiens.html" >Canadiens</a>
+                                            </li>
+                                            <li>
+                                                <a href="Senators.html">Senators</a>
+                                            </li>
+                                            <li>
+                                                <a href="Canucks.html">Canucks</a>
+                                            </li>
+                                            <li>
+                                                <a href="Flames.html">Flames</a>
+                                            </li>
+                                            <li>
+                                                <a href="Jets.html">Jets</a>
+                                            </li>
+                                            <li>
+                                                <a href="Oilers.html">Oilers</a>
+                                            </li>
 
-                                    </ul>
+                                        </ul>
                                     </div>
                                 </div>
     
