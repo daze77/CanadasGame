@@ -33,5 +33,6 @@
 
   Screenshot: ![alt text](CanadasGameScreenshot.png)
 
-  https://github.com/bnicholson87/CanadasGame.git
-  https://hockeyregapplication.herokuapp.com/index.html
+  [GitHub Page - click here](https://github.com/daze77/CanadasGame2.0)
+
+  [Heroku Live Site - click here](https://hockeyregapplication.herokuapp.com/index.html)
