@@ -86,7 +86,7 @@
                 </div>
             </nav>
             <div class="container">
-                <div class="row" id="playerList">
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="playerList">
                         <!-- Team information -->    
                 </div>
             </div>
@@ -138,19 +138,21 @@
             result.forEach(result=>{
             document.querySelector('#playerList').innerHTML += `
 
-                <div class="col-sm-4"> 
-                    <div class="card h-200" id="playerCard">
-                        <p hidden id="playerId">${result.id}</p>
-                        <img src="assets/player_photos/${result.filename}" class="" id="playerPhoto" alt="Player Photo">
-                        <div class="card-body">
-                            <h5 class="card-title" id="playerName">${result.first_name} ${result.last_name}</h5>
-                            <h4 class="card-title" id="position">${result.position}</h4>
-                            <a  href="playerUpdate.html#${result.id}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-primary" onclick="deletePlayer(${result.id})">Delete</a>
-                        </div>
+            <div class="col-sm-4"> 
+
+                <div class="card h-100" ">
+                    <p hidden id="playerId">${result.id}</p>
+                    <img  src="assets/player_photos/${result.filename}" class="card-img-top  id="playerPhoto" alt="Player Photo">
+                    <div class="card-body">
+                        <h5 class="card-title" id="playerName">${result.first_name} ${result.last_name}</h5>
+                        <h4 class="card-title" id="position">${result.position}</h4>
+                        <a  href="playerUpdate.html#${result.id}" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-primary" onclick="deletePlayer(${result.id})">Delete</a>
                     </div>
                 </div>
-                `
+
+            </div>
+            `
             })
         }
         getTeam(name)
