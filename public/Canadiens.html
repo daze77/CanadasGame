@@ -139,9 +139,9 @@
             document.querySelector('#playerList').innerHTML += `
 
                 <div class="col-sm-4"> 
-                    <div class="card h-200" id="playerCard">
+                    <div class="card" id="playerCard">
                         <p hidden id="playerId">${result.id}</p>
-                        <img src="assets/player_photos/${result.filename}" class="" id="playerPhoto" alt="Player Photo">
+                        <img src="assets/player_photos/${result.filename}" class="" id="playerPhoto" alt="Player Photo style = "height=200px, width=200px">
                         <div class="card-body">
                             <h5 class="card-title" id="playerName">${result.first_name} ${result.last_name}</h5>
                             <h4 class="card-title" id="position">${result.position}</h4>
