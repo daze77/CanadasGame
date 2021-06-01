@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canada's Game</title>
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 
     <!--CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecopy.css">
 
     <!-- Font Awesome JS -->
-
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8eeec01ced.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
+
+
+
+
+
+
+
+
+
+
     <div class="wrapper">
         <!-- Sidebar -->
-        <nav id="sidebar">
+        <!-- <nav id="sidebar">
             <div class="sidebar-header">
               <h3>Canada's Game</h3>
             </div>
@@ -69,55 +76,120 @@
                     <a href="Contact.html">Contact</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
         <!-- Page Content -->
+
+        
         <div id="content" id="canadiens">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
+                    <i class="fas fa-bars" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i>
                     <header>Canadiens</header>
                 </div>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                      <h3 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Canada's Game</h3>
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+
+
+
+                        
+
+
+                        <ul class="list-unstyled components">
+                            <li >
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="registration.html">Registration</a>
+                            </li>
+                           
+                            <div class="accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <li class="" id="flush-headingOne">
+                                    <div class=" dropdown-toggle collapsed"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Teams
+                                    </div>
+                                </li>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <ul class="accordion-body list-unstyled" id="pageSubmenu">
+                                        <li>
+                                            <a href="Leafs.html">Leafs</a>
+                                        </li><li>
+                                            <a href="Canadiens.html" >Canadiens</a>
+                                        </li>
+                                        <li>
+                                            <a href="Senators.html">Senators</a>
+                                        </li>
+                                        <li>
+                                            <a href="Canucks.html">Canucks</a>
+                                        </li>
+                                        <li>
+                                            <a href="Flames.html">Flames</a>
+                                        </li>
+                                        <li>
+                                            <a href="Jets.html">Jets</a>
+                                        </li>
+                                        <li>
+                                            <a href="Oilers.html">Oilers</a>
+                                        </li>
+
+                                    </ul>
+                                    </div>
+                                </div>
+    
+                            </div>
+                              
+                            <li>
+                                <a href="Available.html">Available Players</a>
+                            </li>
+                            <li>
+                                <a href="Resources.html">Resources</a>
+                            </li>
+                            <li>
+                                <a href="Contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
             </nav>
+
+
+
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4" id="playerList">
                         <!-- Team information --> 
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
     </div>
-     <!-- jQuery CDN - Slim version (=without AJAX) -->
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <!-- Popper.JS -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-     <!-- Bootstrap JS -->
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
  
      <script type="text/javascript">
-         $(document).ready(function () {
-             $('#sidebarCollapse').on('click', function () {
-                 $('#sidebar').toggleClass('active');
-                 $(this).toggleClass('active');
-             });
 
-         });
 
-         function fetchJSON(url, method = 'get', data = {}) {
-            const fetchOptions = {
-                method,
-                headers: { 'Content-Type': 'application/json' },
-            }
-                if (method === 'post' || method === 'put')
-                    fetchOptions.body = JSON.stringify(data)
-
-                return fetch(url, fetchOptions).then(r => r.json())
+        function fetchJSON(url, method = 'get', data = {}) {
+        const fetchOptions = {
+            method,
+            headers: { 'Content-Type': 'application/json' },
         }
+            if (method === 'post' || method === 'put')
+                fetchOptions.body = JSON.stringify(data)
+
+            return fetch(url, fetchOptions).then(r => r.json())
+        }   
 
         // pull the team name out of the url
         let htmlname = location.href.replace(`.html`, '');
@@ -152,17 +224,7 @@
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-                `
+            `
             })
         }
         getTeam(name)
@@ -184,6 +246,10 @@
 		
 			}
      
-     </script>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
