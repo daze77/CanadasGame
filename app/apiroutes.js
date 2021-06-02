@@ -17,6 +17,38 @@ var storage = multer.diskStorage({
    
   var upload = multer({ storage: storage })
 
+
+
+
+
+// auto email variables
+  var nodemailer = require('nodemailer');
+
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'canadasgame411@gmail.com',
+      pass: 'vmkcrecgnfdlxdmi'
+    }
+  });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function router (app){
     // saving JSON to file
     const savePlayers = './.playersList.json'
@@ -104,12 +136,18 @@ function router (app){
 
         // writing player JSON list to a file
         fs.writeFileSync(savePlayers, JSON.stringify(playersList))
+
+
         
+        registrationConfirmationEmail(email, firstName)
 
         res.redirect('/Available.html')
 
         
     }) 
+
+
+
 
 
     // delete, adjusted to account for photo upload by adding the upload.single
@@ -195,7 +233,36 @@ function router (app){
 
 }
 
+    // send email confirmation
 
+function registrationConfirmationEmail(email, firstName){
+    var mailOptions = {
+        from: 'canadasgame@gmail.com',
+        to: email,
+        subject: 'Thank you for registering today',
+        html: 
+        `
+        <body>
+        <div id="regemail">
+            <p>Hey ${firstName},</p>
+            
+            <p>Please be advised that we have received your registration information.  If you would like to review or update any of your information please visit the site, log in and click on the edit button for your profile to make an update.</p>
+            
+            <p>Thank you</p>
+        </div>
+        </body>
+        `
+        };
+        
+        transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+        });
+
+}
 
 module.exports = router
 
