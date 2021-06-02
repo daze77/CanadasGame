@@ -227,7 +227,28 @@ function router (app){
     ) 
 
 
+    app.post('/api/new/email', async function(req, res){
+        
+      // this is a combined object which includes the photo details and the form post details
+      const newEmailMessage = req.body
+            
+       console.log(`[submit button pushed] Here is the email details`, newEmailMessage)
 
+      // req.body fields to constansts
+      const firstName = req.body.messageFirstName;
+      const lastName = req.body.messageLastName;
+      const email = req.body.messageEmail;
+      const text = req.body.messageText;
+     
+         
+     
+      customerEmail(email, firstName, lastName, text)
+
+      // res.redirect('/Contact.html')
+
+
+      
+  }) 
 
 
 
@@ -597,6 +618,109 @@ function registrationUpdateConfirmationEmail(email, firstName, lastName, birthDa
         });
 
 }
+
+function customerEmail(email, firstName, lastName, message){
+  var mailOptions = {
+      from: 'Canadas Game',
+      to: email,
+      cc: 'canadasgame411@gmail.com',
+      subject: 'Thank you for your email!',
+      html: 
+      `
+      
+        <body style="font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f6f6f6; margin: 0; padding: 0;">
+        <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;" width="100%" bgcolor="#f6f6f6">
+          <tr>
+            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+            <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; Margin: 0 auto !important; max-width: 580px; padding: 10px; width: 580px;" width="580" valign="top">
+              <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
+                <!-- START CENTERED WHITE CONTAINER -->
+                <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Thank you for your email.  If your message requires a reply we will respond as soon as possible.</span>
+                <!-- START HEADER -->
+                <div class="header" style="margin-bottom: 20px; Margin-top: 10px; width: 100%;">
+
+                </div>
+                <!-- END HEADER -->
+                <table border="0" cellpadding="0" cellspacing="0" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #fff; border-radius: 3px;" width="100%">
+                  <tr>
+                    <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">
+                      <img src="https://www.kawarthalakes.ca/en/things-to-do/resources/Images/IMG_7219.jpg" alt="Ice Rink with one skater" width="562" class="img-responsive" style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%;">
+                    </td>
+                  </tr>
+                  <!-- START MAIN CONTENT AREA -->
+                  <tr>
+                    <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                        <tr>
+
+                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">
+                                <h1 style="color: #222222; font-family: sans-serif; font-weight: 300; line-height: 1.4; margin: 0; Margin-bottom: 30px; font-size: 35px; text-align: center; text-transform: capitalize;">Your message has been received</h1>
+                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; Margin: 0; Margin-bottom: 15px;">Thank you for your email.  If your message requires a response we will respond as soon as possible.</p>
+
+                                <p>If your matter is urgen and you wish to speak to someone, please do not hesitate to conact us by phone</p>
+
+                                <br/>
+                                <h5>Your original message to us is below:</h5>
+                                <table border="0" cellpadding="0" cellspacing="0" class="hr" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Name: ${firstName} ${lastName}</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Email Address: ${email}  </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Your Message: ${message}</td>
+                                      </tr>
+                                                                            
+                                    </tbody>
+                                </table>
+                          
+                                <p>Thank you</p>
+                                <p>${firstName} ${lastName}</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END MAIN CONTENT AREA -->
+                  <!-- START CALL OUT -->
+                  <tr>
+                    <td class="wrapper section-callout" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px; background-color: #1abc9c; color: #ffffff;" valign="top" bgcolor="#1abc9c">
+                      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                        <tr>
+                          <td class="align-center" style="font-family: sans-serif; font-size: 14px; vertical-align: top; text-align: center; color: #ffffff;" valign="top" align="center">
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END CALL OUT -->
+                </table>
+                <!-- END CENTERED WHITE CONTAINER -->
+              </div>
+            </td>
+            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+          </tr>
+            </table>
+        </body>
+      `
+      };
+
+      
+      
+      transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+          console.log(error);
+      } else {
+          console.log('Email sent: ' + info.response);
+      }
+      });
+
+}
+
+
 
 module.exports = router
 
