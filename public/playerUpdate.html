@@ -89,17 +89,183 @@
                 <div class="container" id="input">
                   <form  action="/api/player/update" method="post" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate readonly>
                    
-                    <div class="col-md-4">
-                      <label for="validationCustom01" class="form-label">Player ID</label>
-                      <input id="playerid" name="playerid" type="number" class="form-control" id="validationCustom01" value="" required>
-                      <div class="valid-feedback">
-                        Looks good!
+                    <div class="row g-3 m-1">
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Player ID</label>
+                        <input id="playerid" name="playerid" type="number" class="form-control" id="validationCustom01" value="" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
                       </div>
                     </div>
+                    <div class="row g-3 m-1">
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input id="fname" name="first_name" type="text" class="form-control" id="validationCustom01" value="" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">Last name</label>
+                        <input id="lname" name="last_name" type="text" class="form-control" id="validationCustom02" value="" required>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom03" class="form-label">Date of Birth</label>
+                        <div class="input-group has-validation">
+                          <!-- <span class="input-group-text" id="inputGroupPrepend"></span> -->
+                          <input id="dob" name="birth_date" type="date" class="form-control" id="validationCustom03" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please enter your birthday.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom06" class="form-label">Email address</label>
+                        <div class="input-group has-validation">
+                          <!-- <span class="input-group-text" id="inputGroupPrepend"></span> -->
+                          <input id="email" name="email" type="email" class="form-control" id="validationCustom06" aria-describedby="inputGroupPrepend" required>
+                          <div class="invalid-feedback">
+                            Please enter your Email.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom07" class="form-label">Street Addres</label>
+                        <input id="street" name="street" type="text" class="form-control" id="validationCustom07" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid Street Address.
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom07" class="form-label">City</label>
+                        <input id="city" name="city" type="text" class="form-control" id="validationCustom07" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid City.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom08" class="form-label">Province</label>
+                          <select id="prov" name="province" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <option selected>Choose...</option>
+                            <option value="ON">ON</option>
+                          </select>
+                    
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom09" class="form-label">Postal Code</label>
+                        <input id="postal" name="postal_code" type="text" class="form-control" id="validationCustom09" required>
+                        <div class="invalid-feedback">
+                          Please provide a valid postal code.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-3 m-3" id="friend">
+                        <label for="inputFriend" class="col-md-3 col-form-label">Request a Friend</label>
+                        <div class="col">
+                        <input name= "friend_name" type="friend" class="form-control" id="inputFriend" value="Optional">
+                      </div>
+                    </div>
+                    <div class="row g-3 m-1">
+                        <div class="col-md">
+                          <div class="form-floating">
+                            <select id="pos" name="position" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                <option selected>Open this select menu</option>
+                                <option value="Goalie">Goalie</option>
+                                <option value="Defense">Defense</option>
+                                <option value="Forward">Forward</option>
+                            </select>
+                            <label for="floatingSelectGrid">Preferred Position</label>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <div class="form-floating">
+                            <select id="skill" name="experience" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                              <option selected>Open this select menu</option>
+                              <option value="Beginner">Beginner</option>
+                              <option value="Intermediate">Intermediate</option>
+                              <option value="Expert">Expert</option>
+                            </select>
+                            <label for="floatingSelectGrid">Experience Level</label>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 m-3">
+                      <div class="col">
+                        <div class="form-check">
+                          <input id="coach"  name="coach" class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                          <label class="form-check-label" for="flexCheckIndeterminate">
+                            I would like to be a coach
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row g-3 m-3">
+                      <div class="col">
+                        <input type="file" class="form-control-file" name="avatar" />
+                      </div>
+                    </div>
+                    <div class="row g-3 m-1"> 
+                      <div class="col">
+                        <input type="submit" value="Submit form!" class="btn btn-primary btn-lg  float-end"> 
+                      </div>
+                    </div>
+                    <div id= "#playersinformation"> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     
                     
                     
-                   
+<!--                    
                     
                     <div class="col-md-4">
                       <label for="validationCustom01" class="form-label">First name</label>
@@ -206,13 +372,11 @@
                     <div class="col-12">
                       <input type="file" class="form-control-file" name="avatar" />
                     </div>  
-                    
-
                     <div class="col-12">
                       <input type="submit" value="Update form!" class="btn btn-primary" > 
                     </div>
 
-                    <div id= "#playersinformation"> </div>
+                    <div id= "#playersinformation"> </div> -->
                     
                   </form>
                 </div>
