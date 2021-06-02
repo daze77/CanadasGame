@@ -243,9 +243,9 @@ function registrationConfirmationEmail(email, firstName){
         html: 
         `
         <body>
-        <div id="regemail">
+        <div style="color: lightcoral">
             <p>Hey ${firstName},</p>
-            
+
             <p>Please be advised that we have received your registration information.  If you would like to review or update any of your information please visit the site, log in and click on the edit button for your profile to make an update.</p>
             
             <p>Thank you</p>
