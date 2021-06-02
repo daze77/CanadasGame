@@ -139,7 +139,7 @@ function router (app){
 
 
         
-        registrationConfirmationEmail(email, firstName)
+        registrationConfirmationEmail(email, firstName, lastName, birthDate, street, city, postalCode, province, position, skill)
 
         res.redirect('/Available.html')
 
@@ -235,7 +235,7 @@ function router (app){
 
 // send email confirmation following registration
 
-function registrationConfirmationEmail(email, firstName){
+function registrationConfirmationEmail(email, firstName, lastName, birthDate, street, city, postalCode, province, position, skill){
     var mailOptions = {
         from: 'canadasgame@gmail.com',
         to: email,
@@ -249,7 +249,7 @@ function registrationConfirmationEmail(email, firstName){
             <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; Margin: 0 auto !important; max-width: 580px; padding: 10px; width: 580px;" width="580" valign="top">
               <div class="content" style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
                 <!-- START CENTERED WHITE CONTAINER -->
-                <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
+                <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Thank you for registering today.  Your registration details are within.</span>
                 <!-- START HEADER -->
                 <div class="header" style="margin-bottom: 20px; Margin-top: 10px; width: 100%;">
     
@@ -271,6 +271,32 @@ function registrationConfirmationEmail(email, firstName){
                                 <h1 style="color: #222222; font-family: sans-serif; font-weight: 300; line-height: 1.4; margin: 0; Margin-bottom: 30px; font-size: 35px; text-align: center; text-transform: capitalize;">Welcome!!</h1>
                                 <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; Margin: 0; Margin-bottom: 15px;">Please be advised that we have received your registration information.  If you would like to review or update any of your information please visit the site, log in and click on the edit button for your profile to make an update.</p>
                                 <p>For your records below is the information we received.</p>
+
+                                <br/>
+
+                                <table border="0" cellpadding="0" cellspacing="0" class="hr" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Name: ${firstName} ${lastName}</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Date of Birth: ${birthDate} </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Email Address: ${email}  </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Home Address: ${street} ${city} ${province}, ${postalCode} </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Preferred Position:  ${position}</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; height: 20px; line-height: 20px;" valign="top">&nbsp;Experience Level: ${skill} </td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                </table>
                           
                                 <p>Thank you</p>
                                 <p>Canada's Game</p>
