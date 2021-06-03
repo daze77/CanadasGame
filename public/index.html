@@ -88,34 +88,38 @@
                     </div>
                   </div>
             </nav>
-            <div class="row">
-                <img src="assets/ice.jpg" alt="awesome rink picture" style="max-width: fit-content; height: auto" >
-            </div>
-            <!-- feed from social media/api -->
-            <div class="row">
-                <div class="col-6">
-                    <h4>Last Night's Scores</h4>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col" >Home Team</th>
-                            <th scope="col" >Goals</th>
-                            <th scope="col"  >Away Team</th>
-                            <th scope="col">Goals</th>
-                            </tr>
-                        </thead>
-                        <tbody id="scoreTable">
-                        <!--Last night's scores-->
-                        </tbody>
-                    </table>
-                </div>  
-                <div class="col-6">
-                    <h4>Today's Hockey Headlines</h4>
-                    <div class="card">
-                        <div class="card">
-                            <ul class="list-group list-group-flush" id='newsStory'>
-                                <!--News Stories go here-->
-                            </ul>
+            <div class="container">
+                <div class="row">
+                    <img src="assets/ice.jpg" alt="awesome rink picture" style="max-width: fit-content; height: auto" >
+                </div>
+                <!-- feed from social media/api -->
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <div class="col order-lg-1 order-2">
+                            <h4>Last Night's Scores</h4>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col" >Home Team</th>
+                                    <th scope="col" >Goals</th>
+                                    <th scope="col"  >Away Team</th>
+                                    <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="scoreTable">
+                                <!--Last night's scores-->
+                                </tbody>
+                            </table>
+                        </div>  
+                        <div class="col order-lg-2 order-1">
+                            <h4>Today's Hockey Headlines</h4>
+                            <div class="card">
+                                <div class="card">
+                                    <ul class="list-group list-group-flush" id='newsStory'>
+                                        <!--News Stories go here-->
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
