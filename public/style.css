@@ -199,18 +199,18 @@ header {
 }
 
 .registration {
- background-image:url("Assets/puck.jpg");
+ background-image:url("assets/puck.jpg");
  background-size: cover;
  background-repeat: no-repeat;
  
 }
 .schedule{
- background-image:url("Assets/sports_hockey_ProDr8_900x.jpg");
+ background-image:url("assets/sports_hockey_ProDr8_900x.jpg");
  background-size: cover;
  background-repeat: no-repeat;
 }
 .resources{
-    background-image:url("Assets/skates.jpg");
+    background-image:url("assets/skates.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
