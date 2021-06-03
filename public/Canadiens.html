@@ -18,21 +18,7 @@
 </head>
 <body>
 
-
-
-
-
-
-
-
-
-
-    <div class="wrapper">
-        <!-- Sidebar -->
-
-        <!-- Page Content -->
-
-        
+    <div>        
         <div id="content" id="canadiens">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -103,35 +89,22 @@
                     </div>
                   </div>
             </nav>
-
-
-
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-3 g-4" id="playerList">
                         <!-- Team information --> 
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
     </div>
 
 
  
     <script type="text/javascript">
-
-
         function fetchJSON(url, method = 'get', data = {}) {
-        const fetchOptions = {
+            const fetchOptions = {
             method,
             headers: { 'Content-Type': 'application/json' },
-        }
+            }
             if (method === 'post' || method === 'put')
                 fetchOptions.body = JSON.stringify(data)
 
@@ -186,7 +159,6 @@
             location.reload()
         }
              
-
         async function getPlayer(id){
           console.log(`did we get an id`, id)
             let player = await fetch( `/api/player/edit/${id}`).then(r=>r.json());
@@ -194,7 +166,7 @@
             document.querySelector('#fname').value = `${player.first_name}`
  
 		
-			}
+		}
      
     </script>
 
