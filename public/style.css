@@ -215,7 +215,7 @@ header {
     background-repeat: no-repeat;
 }
 .contact {
-    background-image:url("Assets/contact.jpg");
+    background-image:url("assets/contact.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
