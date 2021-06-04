@@ -177,7 +177,7 @@ header {
 
 #input {
     /* border: solid 1px slategray; */
-    float: left;
+    /* float: left; */
     padding: 20px;
     font-weight:bold;
     background:rgba(247, 245, 245, 0.755);
