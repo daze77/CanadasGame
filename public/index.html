@@ -134,15 +134,17 @@
             })    
 
         }
-        // var months = ["January","February","March","April","May","June","July","August","September","October","November","December",]
+        var months = ["January","February","March","April","May","June","July","August","September","October","November","December",]
         var today = new Date()
         var dd = today.getDate()
         var mm = today.getMonth()
         var YYYY = today.getFullYear()
 
+        mm = months[today.getMonth()]
 
-        if( dd < 10 ){ dd = '0'+dd;}
-        if( mm < 10 ){ mm = '0'+ mm;}
+
+        // if( dd < 10 ){ dd = '0'+dd;}
+        // if( mm < 10 ){ mm = '0'+ mm;}
 
         // mm = months[today.getMonth()]
 
