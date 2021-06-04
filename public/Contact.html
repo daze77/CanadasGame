@@ -90,9 +90,8 @@
             </nav>
                 <!-- Contact Info -->
             
-            <div class="row m-5 justify-content-center">
-                <div class="col-8 m-5">
-
+            <div class="row row-cols-1 row-cols-md-2 justify-content-center">
+                <div class="col-md-8">
                     <div class="card mb-4" id="cardInfo">
                         <div class="row g-0">
                             <div class="col-md-4">
@@ -116,19 +115,34 @@
                             </div>
                         </div>
                     </div>
-                    <h1>Send us an email!</h1>
+                </div>
 
-                    <form action="/api/new/email" method="post" >
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 justify-content-center">
+                <div class="col-md-8">
+                    <h1>Send us an email!</h1>
+                    <form action="/api/new/email" method="post">
                         <div class="row row-cols-1 row-cols-lg-2 ">
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="messageFirstName" id="floatingInputValue" placeholder="first name" value="">
+                                    <input type="text" class="form-control" name="messageFirstName" id="floatingInputValue"
+                                        placeholder="first name" value="">
                                     <label for="floatingInputValue">first name</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="messageLastName"id="floatingInputValue" placeholder="last name" value="">
+                                    <input type="text" class="form-control" name="messageLastName" id="floatingInputValue"
+                                        placeholder="last name" value="">
                                     <label for="floatingInputValue">last name</label>
                                 </div>
                             </div>
@@ -136,7 +150,8 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" name="messageEmail" id="floatingInputValue" placeholder="name@example.com" value="">
+                                    <input type="email" class="form-control" name="messageEmail" id="floatingInputValue"
+                                        placeholder="name@example.com" value="">
                                     <label for="floatingInputValue">email address</label>
                                 </div>
                             </div>
@@ -144,26 +159,22 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" placeholder="Leave a comment here" name="messageText" id="floatingTextarea" style="height: 200px" ></textarea>
+                                    <textarea class="form-control" placeholder="Leave a comment here" name="messageText"
+                                        id="floatingTextarea" style="height: 200px"></textarea>
                                     <label for="floatingTextarea">Comments</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <input type="submit" value="Submit!"  class="btn btn-primary float-end">
-
+                                <input type="submit" value="Submit!" class="btn btn-primary float-end">
+            
                             </div>
                         </div>
-
-
-
+            
+            
+            
                     </form>
-
-
-
-
-
                 </div>
             </div>
 
