@@ -213,7 +213,7 @@ header {
  border: solid black 1px;
  border-radius: 2px;
 }
-img {
+.card > img {
     object-fit:cover;
     /* width: 70%; */
     height: 65%;
@@ -227,12 +227,7 @@ h4 {
 .table{
     float: left;
 }
-#contactLG{
-    width: 400px;
-    height: auto;
 
-
-}
 #cardInfo {
     position: center;
     margin-top: 200px;  
