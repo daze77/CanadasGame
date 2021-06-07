@@ -128,16 +128,19 @@
             result.forEach(result=>{
             document.querySelector('#playerList').innerHTML += `
 
-            <div class="col-sm-4"> 
+            <div class="col pt-5"> 
 
-                <div class="card h-100 playercards" >
+                <div class="card h-100" >
                     <p hidden id="playerId">${result.id}</p>
-                    <img  src="assets/player_photos/${result.filename}" class="card-img-top  id="playerPhoto" alt="Player Photo">
+                    <img  style="height: 350px; width: auto" src="assets/player_photos/${result.filename}" class="card-img-top"  id="playerPhoto" alt="Player Photo">
+                    
                     <div class="card-body">
                         <h5 class="card-title" id="playerName">${result.first_name} ${result.last_name}</h5>
                         <h4 class="card-title" id="position">${result.position}</h4>
-                        <a  href="playerUpdate.html#${result.id}" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-primary" onclick="deletePlayer(${result.id})">Delete</a>
+                    </div>
+                    <div class="card-footer">
+                        <a href="playerUpdate.html#${result.id}" class="btn btn-outline-secondary float-start"><i class="fas fa-user-edit"></i></a>
+                        <button class="btn btn-outline-danger float-end" onclick="deletePlayer(${result.id})"><i class="far fa-trash-alt"></i></button>                    
                     </div>
                 </div>
 
