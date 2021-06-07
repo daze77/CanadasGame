@@ -92,7 +92,7 @@
                 <div class="container" id="input">
                   <form  action="/api/player/update" method="post" enctype="multipart/form-data" class="row g-3 needs-validation" novalidate readonly>
                    
-                    <div class="row g-3 m-1">
+                    <div class="row g-3 m-1" style="display: none;" >
                       <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">Player ID</label>
                         <input id="playerid" name="playerid" type="number" class="form-control" id="validationCustom01" value="" required>
@@ -214,6 +214,8 @@
                     <div class="row g-3 m-1"> 
                       <div class="col">
                         <input type="submit" value="Submit form!" class="btn btn-primary btn-lg  float-end"> 
+                        <a class="btn btn-danger btn-lg float-end me-2" href="/index.html" role="button">Cancel</a>
+
                       </div>
                     </div>
                     <div id= "#playersinformation"> </div>                   
