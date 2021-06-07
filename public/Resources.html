@@ -12,6 +12,16 @@
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
 
+    <!-----leaflet map CSS--->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+   <!--leaflet map js-->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/8eeec01ced.js" crossorigin="anonymous"></script>
     
@@ -89,7 +99,7 @@
                   </div>
             </nav>
                 <!-- Resources Map -->
-                <div id="map"></div>
+                <div id="mapid"></div>
 
         
             <a class="btn btn-primary btn-lg" href="https://www.bing.com/maps?osid=8e5ab18c-4d0f-417a-9bd0-f605efa142d0&cp=43.660561~-79.702562&lvl=12&imgid=591eaf43-ae5f-47b6-b8d0-fb5ff988a328&v=2&sV=2&form=S00027" role="button">Find Sports Bars</a>
@@ -100,6 +110,31 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+     <!-- jQuery CDN - Slim version (=without AJAX) -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <!-- Popper.JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+ 
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $('#sidebarCollapse').on('click', function () {
+                 $('#sidebar').toggleClass('active');
+                 $(this).toggleClass('active');
+             });
+         });
+
+         var mymap = L.map('mapid').setView([43.6532, -79.3832], 13);
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiY2F0aGVyaW5lYnNoYXciLCJhIjoiY2tuNHAxdW4wMWppaTJ3bzhvMXFhNDJidyJ9.HEowBjbSZjJeumgIFdN0Sw'
+            }).addTo(mymap);
+     </script>
 
 </body>
 </html>
