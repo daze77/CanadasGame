@@ -8,7 +8,6 @@
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
 
@@ -21,6 +20,8 @@
    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
+   <!--mobile device view of map-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/8eeec01ced.js" crossorigin="anonymous"></script>
@@ -99,7 +100,7 @@
                   </div>
             </nav>
                 <!-- Resources Map -->
-                <div id="mapid"></div>
+                <div id="map"></div>
 
         
             <a class="btn btn-primary btn-lg" href="https://www.bing.com/maps?osid=8e5ab18c-4d0f-417a-9bd0-f605efa142d0&cp=43.660561~-79.702562&lvl=12&imgid=591eaf43-ae5f-47b6-b8d0-fb5ff988a328&v=2&sV=2&form=S00027" role="button">Find Sports Bars</a>
@@ -118,14 +119,14 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
  
      <script type="text/javascript">
-         $(document).ready(function () {
+        $(document).ready(function () {
              $('#sidebarCollapse').on('click', function () {
                  $('#sidebar').toggleClass('active');
                  $(this).toggleClass('active');
-             });
-         });
+                });
+            });
 
-         var mymap = L.map('mapid').setView([43.6532, -79.3832], 13);
+        var map = L.map('map').setView([43.6532, -79.3832], 13)
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
@@ -133,7 +134,38 @@
             tileSize: 512,
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoiY2F0aGVyaW5lYnNoYXciLCJhIjoiY2tuNHAxdW4wMWppaTJ3bzhvMXFhNDJidyJ9.HEowBjbSZjJeumgIFdN0Sw'
-            }).addTo(mymap);
+            }).addTo(map);
+            
+        // map.locate({setView: true, maxZoom: 13})
+
+        // function onLocationFound(e) {
+        //     var radius = e.accuracy;
+
+        //     L.marker(e.latlng).addTo(map)
+        //     .bindPopup("you are here").openPopup();
+
+        //     L.circle(e.latlng, radius).addTo(map);
+        // }
+
+        // map.on('locationfound', onLocationFound)
+
+        // function onLocationError(e) {
+        //     alert(e.message);
+        // }
+        // map.on('locationerror', onLocationError);
+
+        var arenaLocations = [
+            ["ScotiaBank Arena", 43.651890, -79.381710],
+            ["Leaside Memorial Community Gardens", 44.056690, -79.494990],
+            ["Downsview Arena", 43.651890, -79.381706],
+            ["North Toronto Arena", 50.485300, -104.597620]
+        ];
+        for (var i= 0; i<arenaLocations.length; i++) {
+            marker = new L.marker(arenaLocations[i][1], arenaLocations[i][2])
+            .bindPopup(arenaLocations[i][0])
+            .addTo(map)
+        }    
+
      </script>
 
 </body>
