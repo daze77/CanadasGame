@@ -238,7 +238,7 @@ h4 {
 } */
 .btn:hover {
     background-color: red;
-    border: red;
+    border-color: red;
     
 }
 
