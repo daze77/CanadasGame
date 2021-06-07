@@ -149,12 +149,16 @@
         // mm = months[today.getMonth()]
 
         today = YYYY+'-'+mm+'-'+dd;
+        yesterday = YYYY+'-'+mm+'-'+(dd-1);
 
 
         console.log(today)
+        console.log(yesterday)
+
+
 
         async function getMore(){
-            scores = await fetch(`https://api.sportsdata.io/v3/nhl/scores/json/GamesByDate/${today}?key=7e6ae033b7cd4670ba5b1fb51d7b2592`).then(r=>r.json())
+            scores = await fetch(`https://api.sportsdata.io/v3/nhl/scores/json/GamesByDate/${yesterday}?key=7e6ae033b7cd4670ba5b1fb51d7b2592`).then(r=>r.json())
             console.log(scores)
 
             scores.forEach(scores=>{
