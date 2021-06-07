@@ -90,7 +90,7 @@
                   </div>
             </nav>
             <div class="container">
-                <div class="row row-cols-1 row-cols-md-3 p-lg-5" id="playerList">
+                <div class="row row-cols-1 row-cols-md-3 p-lg-5 h-100" id="playerList">
                         <!-- Team information --> 
                 </div>
             </div>
@@ -132,9 +132,9 @@
 
             <div class="col pt-5"> 
 
-                <div class="card h-100" ">
+                <div class="card " ">
                     <p hidden id="playerId">${result.id}</p>
-                    <img  src="assets/player_photos/${result.filename}" class="card-img-top  id="playerPhoto" alt="Player Photo">
+                    <img  style="height: 350px; width: auto" src="assets/player_photos/${result.filename}" class="card-img-top"  id="playerPhoto" alt="Player Photo">
                     <div class="card-body">
                         <h5 class="card-title" id="playerName">${result.first_name} ${result.last_name}</h5>
                         <h4 class="card-title" id="position">${result.position}</h4>

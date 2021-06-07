@@ -216,7 +216,7 @@ header {
 .card > img {
     object-fit:cover;
     /* width: 70%; */
-    height: 65%;
+    /* height: 65%; */
  
 }
 h4 {
