@@ -12,6 +12,15 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
+    <!-----leaflet map CSS--->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+   <!--leaflet map js-->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
     
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -86,7 +95,7 @@
                 </div>
             </nav>
                 <!-- Resources Map -->
-                <div id="map"></div>
+                <div id="mapid"></div>
 
         
             <a class="btn btn-primary btn-lg" href="https://www.bing.com/maps?osid=8e5ab18c-4d0f-417a-9bd0-f605efa142d0&cp=43.660561~-79.702562&lvl=12&imgid=591eaf43-ae5f-47b6-b8d0-fb5ff988a328&v=2&sV=2&form=S00027" role="button">Find Sports Bars</a>
@@ -109,6 +118,16 @@
                  $(this).toggleClass('active');
              });
          });
+
+         var mymap = L.map('mapid').setView([43.6532, -79.3832], 13);
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiY2F0aGVyaW5lYnNoYXciLCJhIjoiY2tuNHAxdW4wMWppaTJ3bzhvMXFhNDJidyJ9.HEowBjbSZjJeumgIFdN0Sw'
+            }).addTo(mymap);
      </script>
 
 </body>

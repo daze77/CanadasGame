@@ -34,7 +34,7 @@ function dbConnect( dbName, dbPassword ){
         port: 3306,
         user: "root",
         /*! please fill in your password; then create the database name below and create the table */
-        password: "Summer77",
+        password: "root",
         database: "hockey_db"
     })
     return db
