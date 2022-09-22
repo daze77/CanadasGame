@@ -244,7 +244,7 @@ function router (app){
      
       customerEmail(email, firstName, lastName, text)
 
-      // res.redirect('/Contact.html')
+      res.redirect('/index.html')
 
 
       

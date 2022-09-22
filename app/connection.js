@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 
 // use this wrapper to create promise around mysql
@@ -34,8 +34,8 @@ function dbConnect( dbName, dbPassword ){
         port: 3306,
         user: "root",
         /*! please fill in your password; then create the database name below and create the table */
-        password: "Summer77",
-        database: "hockey_db"
+        password: dbPassword,
+        database: dbName
     })
     return db
 }
