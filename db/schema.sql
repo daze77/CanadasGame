@@ -4,6 +4,8 @@ CREATE DATABASE hockey_db;
 
 USE hockey_db;
 
+-- USE mySQLdb;
+
 CREATE TABLE team (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR (100) NOT NULL

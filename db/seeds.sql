@@ -1,5 +1,10 @@
 USE hockey_db;
 
+
+-- USE mySQLdb;
+
+
+
 INSERT INTO team (name)
 VALUES ("Leafs"), ("Canadiens"), ("Senators"), ("Canucks"), ("Flames"), ("Jets"), ("Oilers");
 

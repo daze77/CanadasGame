@@ -5,7 +5,7 @@ const mysql = require('mysql2');
 class Database {
     constructor( config ) {
         this.connection = mysql.createConnection( 
-            process.env.JAWSDB_URL ? process.env.JAWSDB_URL : config );
+            process.env.DATABASE_URL ? process.env.DATABASE : config );
     }
     query( sql, args=[] ) {
         return new Promise( ( resolve, reject ) => {
