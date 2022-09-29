@@ -6,7 +6,7 @@ const crypto = require('crypto')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'public/assets/player_photos')
+      cb(null, './public/assets/player_photos')
     },
     filename: (req, file, cb) => {
         let customFileName = crypto.randomBytes(18).toString('hex'),
@@ -16,10 +16,6 @@ var storage = multer.diskStorage({
   })
    
   var upload = multer({ storage: storage })
-
-
-
-
 
 // auto email variables
   var nodemailer = require('nodemailer');
